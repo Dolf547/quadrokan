@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quadro Kanban</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    .kanban-board {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .column {
+      flex: 1;
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+    }
+    
+    .column h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    .task {
+      background-color: #ffffff;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    
+    .task:hover {
+      background-color: #f7f7f7;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .droppable {
+      border: 2px dashed #ccc;
+    }
+  </style>
+ <script type="text/javascript" src="js/quadro.js"></script>
+</head>
+<body>
+  <div class="kanban-board">
+    <div class="column">
+      <h2>A fazer</h2>
+      <div class="task" draggable="true">Tarefa 1</div>
+      <div class="task" draggable="true">Tarefa 2</div>
+      <div class="task" draggable="true">Tarefa 3</div>
+    </div>
+    <div class="column">
+      <h2>Em andamento</h2>
+    </div>
+    <div class="column">
+      <h2>Concluído</h2>
+    </div>
+  </div>
+</body>
+</html>
